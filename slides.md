@@ -322,26 +322,11 @@ layout: two-cols
 ---
 
 # Problema: Laberinto
+Minimizar la cantidad de paredes rotas.
 
 Se desea salir de un laberinto rompiendo la menor cantidad de paredes posibles.
 
 Se comienza desde la pared izquierda y la salida está por la pared derecha.
-
----
-
-# Ejemplo: Laberinto
-
-```
-1 1 1 1 1 1 1 1 1 1
-1 1 0 0 1 0 1 0 0 1
-0 0 0 1 1 0 1 1 0 1
-1 0 0 0 0 0 1 1 0 1
-1 1 1 1 1 1 1 1 0 0
-```
-
----
-
-# Enfoque Greedy para el Laberinto
 
 ```
 1 1 1 1 1 1 1 1 1 1
@@ -354,52 +339,50 @@ Se comienza desde la pared izquierda y la salida está por la pared derecha.
 ---
 
 # Problema: Paréntesis
+Minimizar la cantidad de intercambios.
 
 Se tiene una serie de paréntesis rectos que no se encuentran bien apareados.
 
 Se desea saber la mínima cantidad de intercambios necesarios para dejarlo bien formado. Se asume que la cantidad de [ y ] son la misma.
 
----
 
-# Ejemplo: Paréntesis
+## Ejemplos
 
 Input: `[[][]]][` -> Output: 1
-
----
-
-# Ejemplo: Paréntesis
 
 Input: `[][[][[]]]]][[` -> Output: 2
 
 ---
 
 # Problema: Policías y Ladrones
+Maximizar la cantidad de ladrones capturados.
 
-Dado un conjunto de policías y otro de ladrones, se desea saber el máximo de ladrones capturados. Sabiendo que:
-
+Dado un conjunto de policías y otro de ladrones, se desea saber el máximo de ladrones capturados. 
+Sabiendo que:
 - Cada policía puede atrapar como máximo a un ladrón.
 - El policía puede capturar a una máxima distancia dada (K).
 
----
+<br>
 
-# Ejemplos: Policías y Ladrones
+## Ejemplos
 
 - PLP, K=1
 - LLLPP, K=2
 - LPLLPP, K=2
 - LLLLPLPPP, K=2
 
+<img src="/policeandthief.gif" class="absolute bottom-0 right-0 w-50" />
+
 ---
 
 # Problema: Plataformas
+Minimizar la cantidad de plataformas
 
 Se quiere construir una estación de tren y se necesita saber la cantidad de plataformas se necesitan.
 
 Se tiene los horarios tentativos de llegada y partida.
 
----
-
-# Ejemplo: Plataformas
+## Ejemplo
 
 Input: 
 ```
@@ -407,15 +390,3 @@ arr[] = {9:00, 9:40, 9:50, 11:00, 15:00, 18:00}
 dep[] = {9:10, 12:00, 11:20, 11:30, 19:00, 20:00}
 Output: 3
 ```
-
----
-
-# Ejemplo: Plataformas
-
-Hay a lo sumo 3 trenes al mismo tiempo en la estación (11:00 to 11:20).
-
----
-
-# Enfoque Greedy para Plataformas
-
-Se ordenan todos los eventos por orden de tiempo.
