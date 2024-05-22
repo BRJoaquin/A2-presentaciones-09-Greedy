@@ -1,29 +1,20 @@
 ---
-# try also 'default' to start simple
 theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cdn.jsdelivr.net/gh/slidevjs/slidev-covers@main/static/XdcRfXL2hJ4.webp
-# some information about your slides, markdown enabled
+background: >-
+  https://cdn.jsdelivr.net/gh/slidevjs/slidev-covers@main/static/XdcRfXL2hJ4.webp
 title: Welcome to Slidev
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
 
   Learn more at [Sli.dev](https://sli.dev)
-# apply any unocss classes to the current slide
 class: text-center
-# https://sli.dev/custom/highlighters.html
 highlighter: shiki
-# https://sli.dev/guide/drawing
 drawings:
   persist: false
-lineNumbers: true 
-# slide transition: https://sli.dev/guide/animations#slide-transitions
+lineNumbers: true
 transition: fade-out
-# enable MDC Syntax: https://sli.dev/guide/syntax#mdc-syntax
 mdc: true
-# https://sli.dev/addons/use#use-addon
 addons:
   - slidev-addon-asciinema
 ---
@@ -44,10 +35,6 @@ Un algoritmo **Greedy** (avaro/ávido/voraz) es aquel que construye una solució
 <v-click>
   <img src="/youknowwhat.jpg" class="absolute bottom-0 right-0 w-1/4" />
 </v-click>
-
----
-
-<Asciinema src="./tmp3wudg662-ascii.cast"/>
 
 ---
 
@@ -134,8 +121,6 @@ int minCoins(int coins[], int n, int amount) {
 
 <img src="/dogecoin.png" class="absolute top-0 right-0 w-50" />
 
-
-
 ---
 
 # Problema del Cambio
@@ -154,7 +139,6 @@ Para cambio de 15 pesos:
 
 
 <img src="/dogecoin.png" class="absolute top-0 right-0 w-50" />
-
 
 ---
 
@@ -246,6 +230,10 @@ int knapsackGreedy(int weights[], int values[], int n, int W) {
 }
 ```
 
+<br>
+
+> Tener en cuenta que los elementos deben estar ordenados según el enfoque elegido. De lo contrario habría que ordenarlos previamente.
+
 ---
 
 # Limitaciones de los Algoritmos Greedy
@@ -288,16 +276,48 @@ Valor recolectado: 380 (A y B)
 ---
 
 # Problema: Actividades
+Maximizar la cantidad de actividades realizadas.
 
-Se quiere maximizar la cantidad de actividades a realizar en un evento.
+- Las actividades se deben realizar enteras.
+  - No se puede entrar tarde ni salir temprano.
+  - No se pueden solapar.
+- Se tiene el tiempo de inicio y fin de cada actividad.
+- No tienen ningun orden en particular.
+- Pueden tener diferentes duraciones.
 
-Las actividades se deben realizar enteras (no se puede llegar tarde ni irse antes de que termine).
+<br>
+
+> ¿Qué enfoque podríamos tomar para resolver este problema?
+
+<br>
+
+<v-click>
+  Ideas:
+</v-click>
+
+<v-clicks>
+
+- Ordenar por tiempo de comienzo.
+- Ordenar por duración.
+- Ordenar por tiempo de finalización.
+
+</v-clicks>
+
+<img src="/lolla.webp" class="absolute top-0 right-0 h-140" />
 
 ---
+layout: two-cols
+---
 
-# Enfoque Greedy para Actividades
+# Solución
 
-La idea es ordenar las actividades por orden de finalización. De esta manera solo se realiza una actividad si solo se empieza después (o al mismo tiempo) de la actividad anterior realizada.
+<<< @/snippets/actividades.cpp {all|18-36|13-15|20|25-26|29-34|40-60|77|80|all}{maxHeight:'400px'}
+
+::right::
+
+# Ejecución
+
+<Asciinema src="./casts/actividades-ascii.cast"/>
 
 ---
 
