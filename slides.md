@@ -23,6 +23,9 @@ lineNumbers: true
 transition: fade-out
 # enable MDC Syntax: https://sli.dev/guide/syntax#mdc-syntax
 mdc: true
+# https://sli.dev/addons/use#use-addon
+addons:
+  - slidev-addon-asciinema
 ---
 
 # Algoritmos Greedy
@@ -41,6 +44,10 @@ Un algoritmo **Greedy** (avaro/ávido/voraz) es aquel que construye una solució
 <v-click>
   <img src="/youknowwhat.jpg" class="absolute bottom-0 right-0 w-1/4" />
 </v-click>
+
+---
+
+<Asciinema src="./tmp3wudg662-ascii.cast"/>
 
 ---
 
