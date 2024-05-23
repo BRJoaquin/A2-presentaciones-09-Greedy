@@ -350,7 +350,9 @@ Se desea saber la mínima cantidad de intercambios necesarios para dejarlo bien 
 
 Input: `[[][]]][` -> Output: 1
 
-Input: `[][[][[]]]]][[` -> Output: 2
+Input: `[][[][[]]]]][[` -> Output: 1
+
+Input: `]]][[[` -> Output: 2
 
 ---
 
